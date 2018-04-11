@@ -2,9 +2,24 @@
 
 mobile-selector是一款基于jQuery/zepto的适用于移动端的选择器插件
 
+## 在大神的基础上新增联动三级地区选择
+
+```javascript
+$.areaSelector({
+  evEle: '.sp-area',
+  title: '请选择地区',
+  type: "click",
+  afterAction: function(a, b, c) {
+    $('.sp-area').val(a + ","+ b + "," + c);
+    console.log($('.sp-area').val())
+  }
+});
+
+```
+
 效果图如下：
 
-![出生](./images/1.gif)  ![体重](./images/2.gif) ![睡眠时间](./images/3.gif) ![日期](./images/time.png) ![时间](./images/date.png)
+![出生](./images/area.png)  ![出生](./images/1.gif)  ![体重](./images/2.gif) ![睡眠时间](./images/3.gif) ![日期](./images/time.png) ![时间](./images/date.png)
 
 ## How to Use?
 
